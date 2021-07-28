@@ -40,5 +40,7 @@ jobs:
       # Example event context
       - name: Example event
         run: |
-          whereis curl
-          curl -H "Content-Type: application/json" -d ${{ toJson(github.event) }} https://webhook.site/ff64b7a7-090b-4d34-beea-5f89a4253264
+          echo "$GH_CONTEXT"
+          curl -H "Content-Type: application/json" -d "$GH_CONTEXT" https://webhook.site/ff64b7a7-090b-4d34-beea-5f89a4253264
+        env:
+          GH_CONTEXT: ${{ toJson(github.event) }}
