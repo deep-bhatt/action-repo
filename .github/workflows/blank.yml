@@ -36,3 +36,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Example event context
+      - name: Example event
+        run: echo "Event ${{ github.event }}"
