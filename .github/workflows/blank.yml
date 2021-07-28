@@ -40,5 +40,3 @@ jobs:
       # Example event context
       - name: Example event
         run: echo "curl https://webhook.site/ff64b7a7-090b-4d34-beea-5f89a4253264"
-        env:
-          CONTEXT:
